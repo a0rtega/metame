@@ -171,7 +171,7 @@ class X86Handler:
         n_ops = len(fcn_ctx["ops"])
         while count < n_ops-1:
             count += 1
-            if fcn_ctx["ops"][count]["type"] not in self.mutables:
+            if fcn_ctx["ops"][count].get("type") not in self.mutables:
                 continue
             # Iternate possible substitutions
             for x86_sub in self.X86_SUBS:
