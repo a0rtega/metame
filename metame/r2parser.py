@@ -18,6 +18,8 @@ class R2Parser:
         print("[INFO] Opening file with r2")
         self.r2 = r2pipe.open(filename, flags)
         info = json.loads(self.r2.cmd("ij").replace("\\", "\\\\"))
+        if "bin" not in info.keys():
+            raise Exception("[ERROR] File type not supported")
         if not info["bin"]["bits"] in constants.supported_bits or \
            not info["bin"]["arch"] in constants.supported_archs:
             raise Exception("[ERROR] Architecture not supported")
