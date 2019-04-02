@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
   name                  = 'metame',
   packages              = ['metame'],
-  version               = '0.2',
+  version               = '0.3',
   description           = 'metame is a metamorphic code engine for arbitrary executables',
   author                = 'Alberto Ortega',
   author_email          = 'aortega.lms+metame@gmail.com',
