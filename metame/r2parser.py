@@ -25,7 +25,7 @@ class R2Parser:
         self.bits = info["bin"]["bits"]
         if anal:
             print("[INFO] Analyzing functions with r2")
-            self.r2.cmd("aab")
+            self.r2.cmd("aaa")
 
     def iterate_fcn(self):
         if self.arch == "x86":
