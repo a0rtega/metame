@@ -12,7 +12,7 @@ class R2Parser:
     def __init__(self, filename, anal, debug=False, force_replace=False, write=False):
         self.debug = debug
         self.force = force_replace
-        flags = ["-q"]
+        flags = []
         if write:
             flags.append("-w")
         print("[INFO] Opening file with r2")
